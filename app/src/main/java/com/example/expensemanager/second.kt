@@ -12,9 +12,10 @@ class second : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-//        val category:Category = (Category) intent.getSerializableExtra("category")
+        val category:Category =  intent.getSerializableExtra("category") as Category
 
-//        tvCatName.text = category.
+        tvCatName.text = category.name
+        imageView.setImageResource(category.imageId)
         btnAdd.setOnClickListener {
             val expense:Double = et.text.toString().toDouble()
             Log.d("TOTALE", expense.toString())

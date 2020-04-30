@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var categories = listOf<Category>(Category("Home Rent", R.drawable.home),Category("Eating Out", R.drawable.home),Category("Travel", R.drawable.home),Category("Shopping", R.drawable.home))
+        var categories = listOf<Category>(Category("Home Rent", R.drawable.home),Category("Eating Out", R.drawable.donate),Category("Travel", R.drawable.followup),Category("Shopping", R.drawable.event_image))
         var categoriesName = categories.map { category -> category.name }
         LvExpense.adapter= ArrayAdapter(this,android.R.layout.simple_list_item_1,categoriesName)
 
